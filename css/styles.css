@@ -1,0 +1,69 @@
+@import "import/links.css";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+  /* display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: #1d1d1d; */
+}
+
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+/* img,
+header {
+  width: 100%;
+} */
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav ul {
+  padding: 0px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.img {
+  width: 100%;
+}
+

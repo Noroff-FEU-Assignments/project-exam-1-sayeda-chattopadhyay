@@ -1,0 +1,84 @@
+.hero-section,
+.latest-post-section,
+.top-categories-section,
+.popular-post-section {
+  width: 100%;
+  /* max-width: 1400px; */
+  display: flex;
+  margin: 0 auto;
+  border: 2px solid red;
+}
+
+.top-categories-section {
+  flex-direction: column;
+}
+
+.top-container {
+  border: 2px solid green;
+  /* max-width: 1000px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin: 0 auto; */
+}
+
+.card-container {
+  max-width: 1200px;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+}
+
+/* .card {
+  max-width: 300px;
+} */
+
+/* card */
+
+.small-card-container {
+  margin: 0 auto 100px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.small-card:hover {
+  background-color: #dddddd;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.card-small a,
+.card-medium a,
+.card-big a,
+.card-small-event a {
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.small-card {
+  border: 1px solid #b0aaaa;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 4px;
+}
+
+.division {
+  display: block;
+  background-color: #dad1d1;
+  width: 95%;
+  margin: 0 auto;
+  height: 1px;
+  margin-top: 30px;
+}
+
+h2,
+h3,
+h4 {
+  margin-bottom: 15px;
+}
