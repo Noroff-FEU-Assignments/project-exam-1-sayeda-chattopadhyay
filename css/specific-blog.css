@@ -1,0 +1,13 @@
+.post-details {
+  border: 2px solid red;
+}
+
+.details-card {
+  border: 2px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.details-card > * {
+  flex: 1;
+}

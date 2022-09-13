@@ -12,20 +12,28 @@ html {
 
 body {
   font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* display: grid;
   grid-template-rows: auto 1fr auto;
   color: #1d1d1d; */
+  /* margin: 1.5em; */
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 3rem;
+  margin-top: 2em;
+  line-height: 3.3 rem;
 }
+
+.subhead {
+  font-size: 1.4rem;
+}
+
 h2 {
-  font-size: 20px;
+  font-size: 2rem;
 }
 h3 {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 h4 {
   font-size: 14px;
@@ -42,28 +50,325 @@ header {
   width: 100%;
 } */
 
+/* nav li {
+  display: inline-block;
+} */
+
+/* nav ul {
+  padding: 0px;
+} */
+
+/* nav a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 10px;
+} */
+
+/* nav a:hover {
+  text-decoration: underline;
+} */
+
+/* .img {
+  width: 100%;
+} */
+
+/* header */
+
 header {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  height: 90px;
+  width: 100%;
+  padding: 20px;
+  border: 2px solid red;
 }
 
-nav li {
-  display: inline-block;
+header,
+footer,
+nav {
+  /* background-color: #080439; */
+  color: rgb(4, 4, 4);
 }
 
-nav ul {
+main {
+  margin-top: 90px;
+}
+
+.logo {
+  color: black;
+  font-weight: bold;
+  border: 2px solid brown;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  top: 90px;
+  z-index: 1000;
+  right: 0px;
+}
+
+nav ul,
+.footer-col ul {
   padding: 0px;
 }
 
-nav a {
-  text-decoration: none;
+nav ul li {
+  display: block;
+  padding: 20px 30px;
+  text-align: center;
 }
 
-nav a:hover {
-  text-decoration: underline;
+#hamburger-menu {
+  display: none;
 }
 
-.img {
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+.ikon-spacing {
+  font-size: 2.5em;
+}
+
+/* blog page */
+
+.card-small_container {
+  width: 100%;
+  border: 2px solid red;
+}
+
+/* card */
+
+.posts {
+  margin: 0 auto 100px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  max-width: 1400px;
+  border: 2px solid blue;
+  flex-direction: row;
+}
+
+.posts-card {
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 4px;
+  background-color: #f7f6f6;
+  /* border: 1px solid #b0aaaa; */
+}
+
+/* create confusion. Will create bigger size on hover  */
+/* .posts-card:hover {
+  background-color: #dddddd;
+  cursor: pointer;
+  transition: all 1s ease;
+} */
+
+.posts-card a {
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.posts-image {
   width: 100%;
 }
 
+img {
+  width: 100%;
+}
+
+/* loader style */
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid blue;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* hero section of home page */
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../images/american-heritage-chocolate-5K5Nc3AGF1w-unsplash.jpg");
+  background-size: cover;
+  background-position-x: 20%;
+  background-position-y: 20%;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  /* overflow: hidden; */
+  animation: introLoad 2s forwards;
+}
+/* 
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: white;
+  height: 100vh;
+  width: 40%;
+  z-index: 999;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 8em;
+}
+
+nav ul a {
+  color: black;
+  padding: 0.75em 2em;
+  display: block;
+}
+
+nav ul a:hover {
+  background: rgb(202, 197, 197);
+}
+
+.close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
+}
+
+header svg {
+  width: 3em;
+  cursor: pointer;
+}
+
+section.hero {
+  color: white;
+  height: 90vh;
+  /* animation: moveDown 1s ease-in-out forwards;
+  opacity: 0;
+
+  .down-arrow {
+    stroke: white;
+    bottom: 2em;
+    width: 1em;
+    position: absolute;
+    animation: moveArrow 1s alternate-reverse infinite;
+
+    path {
+      fill: white;
+    }
+  } */
+/* } */
+
+/* 
+section.hero svg {
+  stroke: white;
+  bottom: 2em;
+  width: 1em;
+  position: absolute;
+  animation: moveArrow 1s alternate-reverse infinite;
+}
+
+section.hero svg path {
+  fill: white;
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .menu {
+    display: none;
+  }
+
+  nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav svg.close {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    margin: 0px;
+  }
+  nav ul a {
+    color: white;
+    padding: 0.5em 1.5em;
+    font-size: 0.9rem;
+  }
+  nav ul a:hover {
+    background: none;
+    text-decoration: underline;
+  }
+
+  .hero-img {
+    left: unset;
+    right: 0;
+    width: 50%;
+    height: 42em;
+  }
+
+  .logo {
+    color: black;
+  }
+  .logo span {
+    color: red;
+  }
+
+  section.hero {
+    color: black;
+    height: auto;
+    width: 40%;
+    margin-bottom: 8em;
+  }
+  section.hero svg {
+    stroke: black;
+    position: unset;
+  }
+  section.hero svg path {
+    fill: black;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* .feature {
+    gap: 0;
+  } */

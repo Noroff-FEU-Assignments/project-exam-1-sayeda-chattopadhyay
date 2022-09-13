@@ -1,64 +1,59 @@
-.hero-section,
+/* .hero-section,
 .latest-post-section,
 .top-categories-section,
 .popular-post-section {
   width: 100%;
-  /* max-width: 1400px; */
+  max-width: 1400px;
   display: flex;
   margin: 0 auto;
   border: 2px solid red;
-}
+} */
 
-.top-categories-section {
+/* .top-categories-section {
   flex-direction: column;
-}
+} */
 
-.top-container {
+/* .top-container {
   border: 2px solid green;
-  /* max-width: 1000px; */
+  max-width: 1000px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* margin: 0 auto; */
-}
-
+} */
+/* margin: 0 auto; */
+/* 
 .card-container {
   max-width: 1200px;
   display: flex;
-  /* flex-direction: row; */
+ 
   justify-content: space-between;
-}
-
-/* .card {
-  max-width: 300px;
 } */
+/* flex-direction: row; */
 
-/* card */
-
-.small-card-container {
+/* .small-card-container {
   margin: 0 auto 100px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   gap: 10px;
-}
+} */
 
-.small-card:hover {
+/* .small-card:hover {
   background-color: #dddddd;
   cursor: pointer;
   transition: all 1s ease;
-}
+} */
 
-.card-small a,
+/* .card-small a,
 .card-medium a,
 .card-big a,
 .card-small-event a {
   display: block;
   text-align: center;
   margin: auto;
-}
+} */
 
-.small-card {
+/* .small-card {
   border: 1px solid #b0aaaa;
   border-radius: 4px;
   padding: 20px;
@@ -81,4 +76,75 @@ h2,
 h3,
 h4 {
   margin-bottom: 15px;
+} */
+
+.home-posts {
+  margin: 0 auto 100px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  max-width: 1400px;
+  border: 2px solid blue;
+  flex-direction: row;
+}
+
+.home-posts-card {
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 4px;
+  background-color: #f7f6f6;
+  /* border: 1px solid #b0aaaa; */
+}
+
+/* create confusion. Will create bigger size on hover  */
+/* .posts-card:hover {
+  background-color: #dddddd;
+  cursor: pointer;
+  transition: all 1s ease;
+} */
+
+.home-posts_container {
+  width: 100%;
+  border: 2px solid red;
+}
+
+.home-posts-card a {
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.home-posts-card {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+/* loader style */
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid blue;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
