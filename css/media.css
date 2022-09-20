@@ -6,6 +6,10 @@
   .posts-card {
     width: 90%;
   }
+
+  .modal-image img {
+    width: 80%;
+  }
 }
 
 @media only screen and (min-width: 858px) {

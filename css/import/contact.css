@@ -50,3 +50,10 @@ button {
   margin-top: 20px;
   cursor: pointer;
 }
+
+/* first section */
+
+.bogger-picture {
+  width: 300px;
+  height: 300px;
+}

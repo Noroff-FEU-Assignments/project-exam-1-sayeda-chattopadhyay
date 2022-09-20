@@ -54,3 +54,36 @@ function validateEmail(email) {
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
+
+// hero section
+
+async function getContactPageContent() {
+  const url =
+    "https://mybakingdesire.flopow.one/wp-json/wp/v2/pages/350?_embed";
+  try {
+    const response = await fetch(url);
+    const page = await response.json();
+    console.log({ url: page._embedded["wp:featuredmedia"][0].source_url });
+    createPageHTML(page);
+  } catch (error) {
+    console.log(error);
+    //   productContainer.innerHTML = errorMessage("an error found");
+  }
+}
+getContactPageContent();
+
+function createPageHTML(page) {
+  console.log(page);
+  const contactPageContainer = document.querySelector(".contact-page");
+
+  contactPageContainer.innerHTML = `<div>
+  <h2>${page.title.rendered}</h2>
+                                <div>
+                                <img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text}" class="bogger-picture"/>
+                                  
+                                  <div>${page.content.rendered}</div>
+                                </div>
+  
+  </div>
+                                  `;
+}
