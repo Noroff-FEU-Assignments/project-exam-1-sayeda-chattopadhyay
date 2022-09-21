@@ -1,1 +1,18 @@
+.image-modal {
+  inset: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
 
+.image-modal img {
+  max-width: 100%;
+}
+
+.show-more-results {
+  /* display: flex; */
+  position: absolute;
+  padding: 1rem 1.8rem;
+}

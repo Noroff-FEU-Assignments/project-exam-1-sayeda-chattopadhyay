@@ -1,6 +1,7 @@
 const url =
   "https://mybakingdesire.flopow.one/wp-json/wp/v2/posts?categories=38";
 const postsContainer = document.querySelector(".posts");
+const moreResultsButton = document.querySelector("#more");
 
 async function getPosts() {
   try {
@@ -22,12 +23,8 @@ function createHTML(posts) {
     postsContainer.innerHTML += `<div class="posts-card">
                                       <div>${post.id}</div>
                                       <div class= "posts-image">
-                                          <img src="${post.jetpack_featured_media_url}" alt= "" class="image-post" id ="myImg">
+                                          <img src="${post.jetpack_featured_media_url}" alt= "" class="image-post">
                                       </div>  
-                                      <div class="modal-image" id="myModal">
-                                            <span class="close">&times;</span>
-                                            <img src="${post.jetpack_featured_media_url}" alt= "" class="" id="img01">
-                                      </div>
                                       <div class="posts-text"> 
                                           <h2>${post.title.rendered}</h2>
                                           <p>${post.content.rendered}</p>
@@ -38,52 +35,36 @@ function createHTML(posts) {
                                       </div>    
                                 </div>`;
   });
+
+  addModalFunction();
 }
 
-const postAllImages = document.querySelectorAll(".image-post");
-console.log(postAllImages);
+/* To Create image modal*/
 
-const modal = document.querySelector(".modal-image");
+function addModalFunction() {
+  const postAllImages = document.querySelectorAll(".image-post");
+  console.log(postAllImages);
 
-const modalImg = document.querySelector("#img01");
+  const modal = document.querySelector("#imageModal");
+  const modalImg = document.querySelector("#imageModal img");
 
-postAllImages.forEach((image) => {
-  image.onclick = function () {
-    modal.style.display = "block";
-    modalImg.src = image.getAttribute("scr");
+  postAllImages.forEach((image) => {
+    image.onclick = function () {
+      modal.style.display = "flex";
+      modalImg.src = image.getAttribute("src");
+    };
+  });
+
+  modal.onclick = function () {
+    this.style.display = "none";
   };
+}
+
+// Show more results
+moreResultsButton.addEventListener("click", function () {
+  getPosts(url);
 });
 
-const span = document.querySelector(".close");
-
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-// postAllImages.addEventListener("click", function () {
-//   modal.style.display = "block";
-//   modalImg.scr = this.src;
-// });
-
-// const postsAllImagesContainer = document.querySelectorAll(
-//   "posts-image-Container"
-// );
-// const postAllImages = document.querySelectorAll("posts-image");
-// console.log(postAllImages);
-
-// postAllImages.forEach((image) => {
-//   image.onclck = () => {
-//     postsAllImagesContainer.style.display = "block";
-//     postAllImages.src = image.getAttribute("src");
-//   };
-// });
-
-// document.querySelector(".modal-image span").onclick = () => {
-//   document.querySelector(".modal-image").style.display = "none";
-// };
-// postAllImages.addEventListener("click", function () {
-//   modalImage.src = this.src;
-// });
 // const viewMoreBtn = document.querySelector(".view-more");
 
 // viewMoreBtn.onclick = () =>{
