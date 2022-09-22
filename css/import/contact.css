@@ -1,3 +1,17 @@
+/* Contact page */
+
+.contact-page {
+  margin: 0 auto 100px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  max-width: 1400px;
+  border: 2px solid blue;
+  flex-direction: row;
+}
+
 .form-container {
   border: 2px solid red;
   max-width: 1000px;

@@ -11,8 +11,88 @@
   max-width: 100%;
 }
 
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid brown;
+}
+
 .show-more-results {
   /* display: flex; */
-  position: absolute;
+  /* position: absolute; */
   padding: 1rem 1.8rem;
+  /* display: inline-block; */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-more-results:hover {
+  background-color: brown;
+  color: white;
+}
+
+/* from style.css */
+
+.card-small_container {
+  width: 100%;
+  border: 2px solid red;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card-small_container h1 {
+  margin-bottom: 40px auto 20px;
+  border: 2px solid green;
+}
+
+.posts-conatiner {
+  margin: 0 auto 100px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  max-width: 1400px;
+  border: 2px solid blue;
+  /* display: none; */
+  /* flex-direction: row; */
+}
+
+.posts-card {
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 4px;
+  background-color: #f7f6f6;
+  box-shadow: 0 5px 10px (rgba(0, 0, 0, 2));
+}
+
+.posts-card .posts-image {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+  /* height: 250px; */
+  /* width: 350px; */
+}
+
+.image-post {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* hover affect on posts-card */
+
+.posts-card:hover {
+  background-color: #dddddd;
+  cursor: pointer;
+  transition: all 1s ease;
 }
