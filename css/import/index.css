@@ -12,7 +12,7 @@
   z-index: -1;
 
   animation: introLoad 2s forwards;
-} */ 
+} */
 /* overflow: hidden; */
 
 /* .home-posts_container {
@@ -51,13 +51,10 @@
 }
 
 .cta-explore {
-  /* border: 2px solid #b97c65; */
   background-color: #7f4a39;
   color: #ffff;
   padding: 10px 40px;
-  /* padding: 0.8rem 1.5rem; */
   border-radius: 4px;
-  /* background-color: #b97c65; */
 }
 
 .cta-explore:hover {
