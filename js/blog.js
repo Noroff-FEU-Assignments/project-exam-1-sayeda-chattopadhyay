@@ -1,15 +1,31 @@
-const url =
-  "https://mybakingdesire.flopow.one/wp-json/wp/v2/posts?categories=38&per_page=20";
-
 const postsContainer = document.querySelector(".posts-conatiner");
+const loadMoreButon = document.querySelector("#load-more");
+
+let page = 0;
 
 async function getPosts() {
+  page = page + 1;
+
+  if (page === 1) {
+    postsContainer.innerHTML = "";
+  }
+  const url =
+    "https://mybakingdesire.flopow.one/wp-json/wp/v2/posts?categories=38&page=" +
+    page;
   try {
     const response = await fetch(url);
+
+    const totalPages = response.headers.get("x-wp-totalpages");
+
     const getResults = await response.json();
-    console.log(getResults);
-    postsContainer.innerHTML = "";
+
+    // console.log(getResults);
+
     createHTML(getResults);
+
+    if (page === parseInt(totalPages)) {
+      loadMoreButon.style.visibility = "hidden";
+    }
   } catch (error) {
     console.log(error);
   }
@@ -30,13 +46,17 @@ function createHTML(posts) {
                                           <p>${post.date}</p>
                                       </div>
                                       <div class="posts-button"> 
-                                        <a href="specific-blog.html?id=${post.id}" class="cta">Read The Post</a>
+                                        <a href="specific-blog.html?id=${post.id}" class="cta-card">Read The Post</a>
                                       </div>    
                                 </div>`;
   });
 
   addModalFunction();
 }
+
+loadMoreButon.onclick = function () {
+  getPosts();
+};
 
 /* To Create image modal*/
 
@@ -61,29 +81,28 @@ function addModalFunction() {
 
 // Load more-1
 
-const loadMoreButon = document.querySelector("#load-more");
-const PostCardsAll = document.querySelectorAll(".post-card");
+// const PostCardsAll = document.querySelectorAll(".post-card");
 
-console.log(PostCardsAll);
+// console.log(PostCardsAll);
 
-loadMoreButon.onclick = loadMore();
+// loadMoreButon.onclick = loadMore;
 
-let currentItems = 0;
+// let currentItems = 0;
 
-function loadMore() {
-  console.log("button is working");
+// function loadMore() {
+//   console.log("button is working");
 
-  let maxResult = 2;
+//   let maxResult = 2;
 
-  for (let i = 0; i < maxResult; i++) {
-    if (currentItems > PostCardsAll.length) {
-      loadMoreButon.classList.remove("show-more-results");
-    }
-    postsContainer.innerHTML += PostCardsAll[i + currentItems];
-  }
+//   for (let i = 0; i < maxResult; i++) {
+//     if (currentItems > PostCardsAll.length) {
+//       loadMoreButon.classList.remove("show-more-results");
+//     }
+//     postsContainer.innerHTML += PostCardsAll[i + currentItems];
+//   }
 
-  currentItems += maxResult;
-}
+//   currentItems += maxResult;
+// }
 
 // let cuurentItems = 8;
 

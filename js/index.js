@@ -1,5 +1,9 @@
 // Hero Section
 
+const homePostContainer = document.querySelector(".home-posts");
+const popularPostContainer = document.querySelector(".popular-posts");
+const latestPostContainer = document.querySelector(".latest-posts");
+
 async function getHomeContent() {
   const url = "https://mybakingdesire.flopow.one/wp-json/wp/v2/pages/36?_embed";
   try {
@@ -8,20 +12,30 @@ async function getHomeContent() {
     console.log(page);
     createPageHTML(page);
   } catch (error) {
-    console.log(error);
-    //   productContainer.innerHTML = errorMessage("an error found");
+    console.log("There is an error");
+    // const homePostContainer = document.querySelector(".home-posts");
+    homePostContainer.innerHTML = errorMessage(
+      "error message: this is wrong url"
+    );
   }
 }
 getHomeContent();
 
 function createPageHTML(page) {
   console.log(page);
-  const homePostContainer = document.querySelector(".home-posts");
+  // const homePostContainer = document.querySelector(".home-posts");
 
-  homePostContainer.innerHTML = `<div>
-                                    <div><img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text} class="profile-pic" width="300">
+  homePostContainer.innerHTML = `<div class="hero-section" >
+                                    <div class="hero-image">
+                                      <img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text} class="profile-pic" >
                                     </div>
-                                    <div>${page.content.rendered}</div>
+                                    <div class="hero-text"> 
+                                        <div class="hero-para">${page.content.rendered}</div>
+                                        <div> 
+                                            <a href="blog.html" class="cta-explore">Explore</a>
+                                        </div>  
+                                    </div> 
+                                   
                                 </div>`;
 }
 
@@ -37,14 +51,14 @@ async function getPopularPosts() {
     createPostsHTML(posts);
   } catch (error) {
     console.log(error);
-    //   productContainer.innerHTML = errorMessage("an error found");
+    popularPostContainer.innerHTML = errorMessage("Popular posts not coming");
   }
 }
 
 getPopularPosts();
 
 function createPostsHTML(posts) {
-  const popularPostContainer = document.querySelector(".popular-posts");
+  // const popularPostContainer = document.querySelector(".popular-posts");
 
   posts.forEach(function (post) {
     popularPostContainer.innerHTML += `<a href="specific-blog.html?id=${post.id}" class="posts-card">
@@ -68,13 +82,13 @@ async function getLatestPosts() {
     createSliderPosts(posts);
   } catch (error) {
     console.log(error);
-    //   productContainer.innerHTML = errorMessage("an error found");
+    latestPostContainer.innerHTML = errorMessage("latest posts not found");
   }
 }
 
 getLatestPosts();
 
-const latestPostContainer = document.querySelector(".latest-posts");
+// const latestPostContainer = document.querySelector(".latest-posts");
 
 function createSliderPosts(posts) {
   posts.forEach(function (post) {
@@ -91,21 +105,23 @@ function createSliderPosts(posts) {
 
 // Latest Posts Carousel
 
-const latestPostCard = document.querySelectorAll(".latest-post-card");
+const latestPostCard = document.querySelectorAll(".posts-card");
 console.log(latestPostCard);
 
 const prevButton = document.getElementById("#arrow-prev");
-console.log(prevButton);
+console.log("previous button");
 
 const nextButton = document.getElementById("#arrow-next");
 console.log(nextButton);
 
-nextButton.addEventListener("click", (blog) => {
-  const latestPostCardWidth = latestPostCard.clientWidth;
+nextButton.addEventListener("click", (event) => {
+  const latestPostCardWidth = document.querySelector(".posts-card").clientWidth;
+  // const latestPostCardWidth = latestPostCard.clientWidth;
   latestPostContainer.scrollLeft += latestPostCardWidth;
 });
 
-prevButton.addEventListener("click", (blog) => {
-  const latestPostCardWidth = latestPostCard.clientWidth;
-  latestPostContainer.scrollLeft -= latestPostCardWidth;
+prevButton.addEventListener("click", () => {
+  const latestPostCardWidth = document.querySelector(".posts-card").clientWidth;
+  // const latestPostCardWidth = latestPostCard.clientWidth;
+  // latestPostContainer.scrollLeft -= latestPostCardWidth;
 });

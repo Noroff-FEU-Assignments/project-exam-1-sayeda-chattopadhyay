@@ -1,6 +1,6 @@
 /* hero section */
 
-.hero-img {
+/* .hero-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -11,19 +11,66 @@
   width: 100%;
   height: 100vh;
   z-index: -1;
-  /* overflow: hidden; */
+ 
   animation: introLoad 2s forwards;
-}
+} */
+/* overflow: hidden; */
 
-.home-posts_container {
+/* .home-posts_container {
   width: 100%;
   border: 2px solid red;
+} */
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+  border: 2px solid blue;
+  margin: 0 auto 100px;
+  padding: 20px;
 }
 
-.profile-pic {
+.hero-section > div {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 2;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-para {
+  margin-bottom: 20px;
+}
+
+.cta-explore {
+  /* border: 2px solid #b97c65; */
+  background-color: #7f4a39;
+  color: #ffff;
+  padding: 10px 40px;
+  /* padding: 0.8rem 1.5rem; */
+  border-radius: 4px;
+  /* background-color: #b97c65; */
+}
+
+.cta-explore:hover {
+  border: 2px solid #b97c65;
+  background-color: #fff;
+  color: #7f4a39;
+}
+
+/* .profile-pic {
   width: 300px;
   height: 300px;
-}
+} */
 
 /* Latest Post carousel */
 

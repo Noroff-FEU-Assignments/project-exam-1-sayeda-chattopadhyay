@@ -152,6 +152,15 @@ nav ul li {
   width: 100%;
 }
 
+/* error message style */
+
+.error {
+  border: 1px solid darkred;
+  padding: 1rem;
+  color: darkred;
+  background: rgba(255, 0, 0, 0.1);
+}
+
 /* Home page card*/
 
 /* .carousel-container {
