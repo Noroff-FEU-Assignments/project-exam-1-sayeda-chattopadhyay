@@ -13,7 +13,6 @@ async function getHomeContent() {
     createPageHTML(page);
   } catch (error) {
     console.log("There is an error");
-    // const homePostContainer = document.querySelector(".home-posts");
     homePostContainer.innerHTML = errorMessage(
       "error message: this is wrong url"
     );
@@ -22,13 +21,9 @@ async function getHomeContent() {
 getHomeContent();
 
 function createPageHTML(page) {
-  console.log(page);
-  // const homePostContainer = document.querySelector(".home-posts");
-
   homePostContainer.innerHTML = `<div class="hero-section" >
-                                    <div class="hero-image">
-                                      <img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text} class="profile-pic" >
-                                    </div>
+                                    <div class="hero-image"style="background-image:url(${page._embedded["wp:featuredmedia"][0].source_url});"></div>
+            
                                     <div class="hero-text"> 
                                         <div class="hero-para">${page.content.rendered}</div>
                                         <div> 
@@ -58,8 +53,6 @@ async function getPopularPosts() {
 getPopularPosts();
 
 function createPostsHTML(posts) {
-  // const popularPostContainer = document.querySelector(".popular-posts");
-
   posts.forEach(function (post) {
     popularPostContainer.innerHTML += `<a href="specific-blog.html?id=${post.id}" class="posts-card">
                                           <img src="${post.jetpack_featured_media_url}" alt= "${post.title.rendered}" class="posts-image">
@@ -88,8 +81,6 @@ async function getLatestPosts() {
 
 getLatestPosts();
 
-// const latestPostContainer = document.querySelector(".latest-posts");
-
 function createSliderPosts(posts) {
   posts.forEach(function (post) {
     latestPostContainer.innerHTML += `<div class="latest-post-card">
@@ -108,20 +99,25 @@ function createSliderPosts(posts) {
 const latestPostCard = document.querySelectorAll(".posts-card");
 console.log(latestPostCard);
 
-const prevButton = document.getElementById("#arrow-prev");
+const prevButton = document.getElementById("arrow-prev");
 console.log("previous button");
 
-const nextButton = document.getElementById("#arrow-next");
-console.log(nextButton);
+const nextButton = document.getElementById("arrow-next");
+console.log("next Button");
 
 nextButton.addEventListener("click", (event) => {
-  const latestPostCardWidth = document.querySelector(".posts-card").clientWidth;
+  const latestPostCardWidth =
+    document.querySelector(".latest-post-card").clientWidth;
   // const latestPostCardWidth = latestPostCard.clientWidth;
   latestPostContainer.scrollLeft += latestPostCardWidth;
 });
 
 prevButton.addEventListener("click", () => {
-  const latestPostCardWidth = document.querySelector(".posts-card").clientWidth;
+  const latestPostCardWidth =
+    document.querySelector(".latest-post-card").clientWidth;
   // const latestPostCardWidth = latestPostCard.clientWidth;
-  // latestPostContainer.scrollLeft -= latestPostCardWidth;
+  latestPostContainer.scrollLeft -= latestPostCardWidth;
 });
+
+// <img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text} class="profile-pic" >
+// <img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text} class="profile-pic" >
