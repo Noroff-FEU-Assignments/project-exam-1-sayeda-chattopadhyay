@@ -28,11 +28,11 @@ async function fetchPost() {
 fetchPost();
 
 function createHTML(details) {
-  detailsContainer.innerHTML += `<div class="details-card">
-                                    <div><img src="${details.jetpack_featured_media_url}" alt= "#"></div>
-                                    <div>
+  detailsContainer.innerHTML += `<h1 class="blog-heading">${details.title.rendered}</h1>
+                                  <div class="details-card">
+                                    <div class="details-card-image"><img src="${details.jetpack_featured_media_url}" alt= "#"></div>
+                                    <div "details-card-text">
                                         <h2>${details.title.rendered}</h2>
-                                        <p>${details.id}</p>
                                         <p>${details.date}</p>  
                                         <p>${details.content.rendered}</p> 
                                     </div>    

@@ -1,10 +1,10 @@
-@import "import/links.css";
 @import "import/about.css";
 @import "import/contact.css";
 @import "import/index.css";
 @import "import/blog.css";
 @import "import/specific-blog.css";
 @import "fontAwesome/all.min.css";
+@import "import/variables.css";
 
 * {
   box-sizing: border-box;
@@ -22,17 +22,21 @@ body {
   /* display: grid;
   grid-template-rows: auto 1fr auto;
   color: #1d1d1d; */
-  /* margin: 1.5em; */
+  margin: 1.5em;
 }
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* mobile view of font size  of hero text*/
 
 h1 {
-  font-size: 3rem;
-  margin-top: 2em;
+  font-size: 1.8rem;
+  margin-top: 1em;
+  margin-bottom: 0.8em;
   line-height: 3.3 rem;
-}
-
-.subhead {
-  font-size: 1.4rem;
 }
 
 h2 {
@@ -51,12 +55,7 @@ p {
   letter-spacing: 0.5px;
 }
 
-header {
-  width: 100%;
-  background-color: bisque;
-}
-
-/* header */
+/* header of Mobile */
 
 header {
   display: flex;
@@ -64,17 +63,17 @@ header {
   justify-content: space-between;
   position: fixed;
   top: 0px;
-  height: 90px;
-  width: 100%;
+  /* height: 90px; */
   padding: 20px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  width: 100%;
 }
 
 header,
 footer,
 nav {
-  /* background-color: #080439; */
-  color: rgb(4, 4, 4);
+  background-color: #f9d9e7;
+  color: #000;
 }
 
 main {
@@ -82,10 +81,12 @@ main {
 }
 
 .logo {
-  color: black;
+  color: #fff;
   font-weight: bold;
   border: 2px solid brown;
 }
+
+/* mobile view of nav */
 
 nav {
   display: none;
@@ -93,17 +94,69 @@ nav {
   top: 90px;
   z-index: 1000;
   right: 0px;
+  /* top: 0px; */
+  /* width: 40%;
+  height: 100vh;
+  background: #fff;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out; */
 }
 
 nav ul,
 .footer-col ul {
   padding: 0px;
+  list-style-type: none;
+  margin-top: 3em;
 }
 
 nav ul li {
   display: block;
   padding: 20px 30px;
   text-align: center;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #484747;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+  font-size: 1.2em;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+
+nav ul li a:hover {
+  color: #666262;
+}
+
+/* stroke */
+nav.stroke ul li a {
+  position: relative;
+}
+
+nav.stroke ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 2px;
+}
+
+nav.stroke ul li a:hover:after {
+  width: 100%;
 }
 
 #hamburger-menu {
@@ -138,6 +191,17 @@ nav ul li {
   }
 }
 
+/* Divider between sections(div) */
+
+.division {
+  display: block;
+  background-color: #dad1d1;
+  width: 95%;
+  margin: 0 auto;
+  height: 1px;
+  margin: 2em;
+}
+
 /* Style for all posts card links*/
 
 .posts-card a {
@@ -160,6 +224,117 @@ nav ul li {
   color: darkred;
   background: rgba(255, 0, 0, 0.1);
 }
+
+/* Footer and active class of nav */
+
+.footer-col ul li a:hover,
+.active {
+  text-decoration: underline;
+  /* font-size: 1.3em; */
+}
+
+/* cta button for all pages */
+
+button {
+  background-color: var(--cta-background-colour);
+  color: var(--cta-text);
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 300px;
+  padding: 20px;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* trying again for carousel */
+
+/* .index-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+
+/* desktop view , need to add it in the madia query */
+/* .carouselNavigation {
+  margin: 25px auto auto auto;
+  display: flex;
+  flex-direction: row;
+  gap: 159px;
+} */
+
+/* mobile view , need to add it  */
+
+/* .carouselNavigation {
+  display: none;
+} */
+
+/* Previous button and next button */
+/* .cta {
+  text-align: center;
+  color: white;
+  background-color: var(--main-cta-color);
+  font-family: var(--body-font);
+  padding: 7px 44px;
+  box-shadow: 0px 3px 6px black;
+  border: 2px solid var(--main-cta-color);
+} */
+
+/* carousel info  in desktop*/
+
+/* .carousel-info {
+  display: none;
+  font-size: 1.5em;
+  margin: 10px auto;
+} */
+
+/* carousel info  in mobile*/
+/* .carousel-info {
+  display: block;
+  margin: 10px auto;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 964px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.content-container {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.latest-posts {
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.error-alert {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.latest-post-card {
+  width: 228px;
+  height: 474px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cta-container {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: auto;
+} */
+/* Home page  */
 
 /* Home page card*/
 

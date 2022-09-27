@@ -2,7 +2,7 @@
 
 const homePostContainer = document.querySelector(".home-posts");
 const popularPostContainer = document.querySelector(".popular-posts");
-const latestPostContainer = document.querySelector(".latest-posts");
+const slider = document.querySelector(".slider");
 
 async function getHomeContent() {
   const url = "https://mybakingdesire.flopow.one/wp-json/wp/v2/pages/36?_embed";
@@ -22,15 +22,13 @@ getHomeContent();
 
 function createPageHTML(page) {
   homePostContainer.innerHTML = `<div class="hero-section" >
-                                    <div class="hero-image"style="background-image:url(${page._embedded["wp:featuredmedia"][0].source_url});"></div>
-            
+                                    <div class="hero-image"style="background-image:url(${page._embedded["wp:featuredmedia"][0].source_url});"></div>          
                                     <div class="hero-text"> 
                                         <div class="hero-para">${page.content.rendered}</div>
                                         <div> 
                                             <a href="blog.html" class="cta-explore">Explore</a>
                                         </div>  
                                     </div> 
-                                   
                                 </div>`;
 }
 
@@ -63,7 +61,7 @@ function createPostsHTML(posts) {
   });
 }
 
-// Fetching Latest Posts
+// Fetching Latest Posts in the Slider
 
 async function getLatestPosts() {
   const url =
@@ -75,7 +73,7 @@ async function getLatestPosts() {
     createSliderPosts(posts);
   } catch (error) {
     console.log(error);
-    latestPostContainer.innerHTML = errorMessage("latest posts not found");
+    slider.innerHTML = errorMessage("latest posts not found");
   }
 }
 
@@ -83,41 +81,35 @@ getLatestPosts();
 
 function createSliderPosts(posts) {
   posts.forEach(function (post) {
-    latestPostContainer.innerHTML += `<div class="latest-post-card">
+    slider.innerHTML += `<div class="latest-post-card">
                                         <a href="specific-blog.html?id=${post.id}" class="posts-card">
-                                              <img src="${post.jetpack_featured_media_url}" alt= "${post.title.rendered}" class="posts-image">
-                                              <div class="posts-text">
+                                            <img src="${post.jetpack_featured_media_url}" alt= "${post.title.rendered}" class="posts-image">
+                                            <div class="posts-text">
                                                 <h2>${post.slug}</h2>   
-                                              </div>
+                                            </div>
                                         </a>
-                                      </div>`;
+                                </div>`;
   });
 }
 
 // Latest Posts Carousel
 
 const latestPostCard = document.querySelectorAll(".posts-card");
-console.log(latestPostCard);
 
 const prevButton = document.getElementById("arrow-prev");
-console.log("previous button");
 
 const nextButton = document.getElementById("arrow-next");
-console.log("next Button");
 
 nextButton.addEventListener("click", (event) => {
   const latestPostCardWidth =
     document.querySelector(".latest-post-card").clientWidth;
   // const latestPostCardWidth = latestPostCard.clientWidth;
-  latestPostContainer.scrollLeft += latestPostCardWidth;
+  slider.scrollLeft += latestPostCardWidth;
 });
 
 prevButton.addEventListener("click", () => {
   const latestPostCardWidth =
     document.querySelector(".latest-post-card").clientWidth;
   // const latestPostCardWidth = latestPostCard.clientWidth;
-  latestPostContainer.scrollLeft -= latestPostCardWidth;
+  slider.scrollLeft -= latestPostCardWidth;
 });
-
-// <img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text} class="profile-pic" >
-// <img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text} class="profile-pic" >

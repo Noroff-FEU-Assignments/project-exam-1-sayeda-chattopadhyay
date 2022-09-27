@@ -1,10 +1,41 @@
+/* Breadcrump design */
+
+.breadcrumb {
+  padding: 0 0.5rem;
+  border: 2px solid red;
+  margin-top: 100px;
+  padding: 10px;
+}
+
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 2px solid green;
+}
+
+.breadcrumb ul li {
+  margin-right: 10px;
+}
+
+.breadcrumb li:not(:first-child)::before {
+  content: "→";
+  margin-right: 10px;
+}
+
 .post-details {
   border: 2px solid red;
 }
 
 .details-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
   border: 2px solid blue;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
 }

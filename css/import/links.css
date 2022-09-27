@@ -1,9 +1,0 @@
-a {
-  text-decoration: none;
-}
-
-nav ul li a:hover,
-.footer-col ul li a:hover,
-.active {
-  text-decoration: underline;
-}

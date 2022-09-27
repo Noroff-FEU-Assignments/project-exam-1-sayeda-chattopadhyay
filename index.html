@@ -40,12 +40,14 @@
   </head>
   <body>
     <header>
-      <a href="index.html" class="logo"><span>My</span>Baking Desire</a>
+      <div class="logo-container">
+        <a href="index.html" class="logo"><span>My</span>Baking Desire</a>
+      </div>
       <label for="hamburger-menu" class="hamburger-menu_icon"
         ><i class="fas fa-bars ikon-spacing"></i
       ></label>
       <input type="checkbox" id="hamburger-menu" />
-      <nav>
+      <nav class="stroke">
         <ul class="nav1">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -54,34 +56,32 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <div class="home-posts_container">
-        <div class="home-posts">
-          <div class="loader"></div>
-        </div>
+    <main class="index-main">
+      <div class="home-posts">
+        <div class="loader"></div>
       </div>
-      <h2>Latest Posts</h2>
-
+      <div class="division"></div>
+      <h1 class="page-headings">Latest Posts</h1>
+      <div class="underline-headings"></div>
       <div class="carousel-container">
-        <div class="carousel-slider">
-          <!-- <button class="slide-arrow" id="arrow-prev">&#8249;</button>
-          <button class="slide-arrow" id="arrow-next">&#8250;</button> -->
-
+        <div class="slider-container">
           <div class="slide-arrow" id="arrow-prev">
             <i class="fa-solid fa-chevron-left"></i>
           </div>
           <div class="slide-arrow" id="arrow-next">
             <i class="fa-solid fa-chevron-right"></i>
           </div>
-          <div class="latest-posts"></div>
+          <div class="slider"></div>
         </div>
       </div>
+      <div class="division"></div>
       <div class="popular-post_container">
         <h2>Popular Indian Sweets</h2>
         <div class="popular-posts"></div>
       </div>
     </main>
-    <footer class="footerContainer"></footer>
+
+    <footer class="footerContainer">Footer</footer>
     <script src="js/components/displayError.js"></script>
     <script src="js/index.js"></script>
   </body>
