@@ -30,7 +30,7 @@ fetchPost();
 function createHTML(details) {
   detailsContainer.innerHTML += `<h1 class="blog-heading">${details.title.rendered}</h1>
                                   <div class="details-card">
-                                    <div class="details-card-image"><img src="${details.jetpack_featured_media_url}" alt= "#"></div>
+                                    <div class="details-card-image"><img src="${details.jetpack_featured_media_url}" alt= "${details.title.rendered}"></div>
                                     <div "details-card-text">
                                         <h2>${details.title.rendered}</h2>
                                         <p>${details.date}</p>  

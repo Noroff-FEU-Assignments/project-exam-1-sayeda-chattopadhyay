@@ -38,11 +38,11 @@ function createHTML(posts) {
   posts.forEach(function (post) {
     postsContainer.innerHTML += `<div class="posts-card">
                                       <div class= "posts-image">
-                                          <img src="${post.jetpack_featured_media_url}" alt= "" class="image-post">
+                                          <img src="${post.jetpack_featured_media_url}" alt= "${post.title.rendered}" class="image-post">
                                       </div>  
                                       <div class="posts-text"> 
                                           <h2>${post.title.rendered}</h2>
-                                          <p>${post.content.rendered}</p>
+                                          <p>${post.excerpt.rendered}</p>
                                           <p>${post.date}</p>
                                       </div>
                                       <div class="posts-button"> 

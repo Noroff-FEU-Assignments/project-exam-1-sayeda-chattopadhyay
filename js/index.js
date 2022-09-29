@@ -23,7 +23,7 @@ getHomeContent();
 function createPageHTML(page) {
   homePostContainer.innerHTML = `<div class="hero-section" >
                                     <div class="hero-image"style="background-image:url(${page._embedded["wp:featuredmedia"][0].source_url});"></div>          
-                                    <div class="hero-text"> 
+                                    <div class="hero-text">
                                         <div class="hero-para">${page.content.rendered}</div>
                                         <div> 
                                             <a href="blog.html" class="cta-explore">Explore</a>
@@ -83,9 +83,13 @@ function createSliderPosts(posts) {
   posts.forEach(function (post) {
     slider.innerHTML += `<div class="latest-post-card">
                                         <a href="specific-blog.html?id=${post.id}" class="posts-card">
-                                            <img src="${post.jetpack_featured_media_url}" alt= "${post.title.rendered}" class="posts-image">
+                                            <div><img src="${post.jetpack_featured_media_url}" alt= "${post.title.rendered}" class="posts-image"></div>
                                             <div class="posts-text">
-                                                <h2>${post.slug}</h2>   
+                                                <h3>${post.title.rendered}</h3>
+                                                <p>${post.excerpt.rendered}</p>
+                                                <br>
+                                                <hr>
+                                               <p class="post_date">Date: ${post.date}</p>
                                             </div>
                                         </a>
                                 </div>`;
@@ -102,14 +106,14 @@ const nextButton = document.getElementById("arrow-next");
 
 nextButton.addEventListener("click", (event) => {
   const latestPostCardWidth =
-    document.querySelector(".latest-post-card").clientWidth;
+    document.querySelector(".latest-post-card").clientWidth * 4 + 30;
   // const latestPostCardWidth = latestPostCard.clientWidth;
   slider.scrollLeft += latestPostCardWidth;
 });
 
 prevButton.addEventListener("click", () => {
   const latestPostCardWidth =
-    document.querySelector(".latest-post-card").clientWidth;
+    document.querySelector(".latest-post-card").clientWidth * 4 + 30;
   // const latestPostCardWidth = latestPostCard.clientWidth;
   slider.scrollLeft -= latestPostCardWidth;
 });

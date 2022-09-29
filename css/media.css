@@ -20,7 +20,7 @@
   }
 }
 
-/* Desktop view */
+/* Desktop view  of header and nav for all  pages*/
 
 @media only screen and (min-width: 858px) {
   /* To remove right and left value */
@@ -41,6 +41,14 @@
     position: static;
     top: 0px;
     /* border: 2px solid blue; */
+
+    /* javas */
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
   }
 
   /* To make the ul in the center of the header wwe need to remove the value */
@@ -57,18 +65,38 @@
     padding: 20px;
   }
 
-  /* Desktop view of carusel */
+  /* javascript hamburger */
+
+  .menu {
+    display: none;
+  }
+
+  .close {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    margin: 0px;
+  }
+
+  /* javascript hamburger end*/
+
+  /* Desktop view of carousel */
 
   .slider {
     width: 100%;
     max-width: 90%;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 4px;
     margin: 0 auto;
   }
+
   .posts-text h2 {
-    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-size: 1.3rem;
   }
 
   /* desktop view of slider and arrow style */
@@ -81,7 +109,7 @@
     bottom: 0;
     margin: auto;
     height: 4rem;
-    background-color: blue;
+    background-color: var(--primary-colour);
     color: #f3f3f3;
     border: none;
     width: 2rem;
@@ -111,70 +139,6 @@
     padding-left: 0.75rem;
     border-radius: 2rem 0 0 2rem;
   }
-  /* .home-posts_container {
-    margin-top: 136px;
-    border: 2px dotted red;
-  } */
-
-  /* Start of code pin */
-  /* 
-  nav {
-    width: 80%;
-    margin: 0 auto;
-    background: #fff;
-    padding: 50px 0;
-    box-shadow: 0px 5px 0px #dedede;
-    border: 2px solid green;
-  } */
-
-  /* nav ul {
-    list-style: none;
-    text-align: center;
-  } */
-
-  /* nav ul li {
-    display: inline-block;
-  } */
-
-  /* start of code pin */
-  /* nav ul li a {
-    display: block;
-    padding: 15px;
-    text-decoration: none;
-    color: #aaa;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin: 0 10px;
-  }
-
-  nav ul li a,
-  nav ul li a:after,
-  nav ul li a:before {
-    transition: all 0.5s;
-  }
- 
-  nav.stroke ul li a {
-    position: relative;
-  }
-
-  nav.stroke ul li a:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 0%;
-    content: ".";
-    color: transparent;
-    background: #aaa;
-    height: 1px;
-  }
-
-  nav.stroke ul li a:hover:after {
-    width: 100%;
-  } */
-
-  /* end of code pin */
 
   header label {
     display: none;
@@ -187,13 +151,26 @@
   /* desktop view of font size */
 
   h1 {
-    font-size: 1.8rem;
     margin-bottom: 1em;
   }
 
-  h2 {
-    font-size: 32px;
+  .logo {
+    font-size: 3rem;
   }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  /*
   h3 {
     font-size: 28px;
   }
@@ -203,7 +180,7 @@
 
   p {
     font-size: 18px;
-  }
+  } */
 
   .post {
     display: flex;
@@ -212,12 +189,18 @@
 
   .posts-card {
     max-width: 400px;
+    box-shadow: 0 20px 30px 0 rgb(0 0 0 / 10%);
   }
   .post {
     flex-direction: row;
   }
 
-  /* desktop view of hero section */
+  /* desktop view of hero section - home page*/
+
+  /* creater margin top to the main */
+  .home-container {
+    margin: 200px auto;
+  }
 
   .home-posts {
     margin-top: 136px;
@@ -229,9 +212,9 @@
     height: 90vh;
   }
 
-  .hero-section > * {
+  /* .hero-section > * {
     flex: 1;
-  }
+  } */
 
   .hero-image {
     width: 100%;
@@ -239,7 +222,21 @@
     order: 2;
   }
 
+  .hero-text {
+    /* max-width: 400px; */
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-text p {
+    text-align: left;
+  }
   /* specific page desktop view */
+
+  .specific-page-container {
+    margin-top: 200px;
+  }
 
   .breadcrumb {
     margin-top: 150px;
@@ -247,5 +244,42 @@
 
   .breadcrumb ul {
     flex-direction: row;
+  }
+
+  /* About page desktop view */
+  .hero-sec {
+    width: 100%;
+    max-width: 80%;
+    flex-direction: row;
+    gap: 100px;
+  }
+
+  .hero-sec > * {
+    flex: 1;
+  }
+
+  .about-text-container {
+    flex: 1;
+  }
+
+  /* .about-text {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  /* contact page- desktop view */
+
+  /* contact page hero section */
+
+  .contact-hero-sec {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .hero-contact-image {
+    width: 100%;
+    /* max-width: 600px; */
+    /* flex: 2; */
+    /* order: 2; */
   }
 }

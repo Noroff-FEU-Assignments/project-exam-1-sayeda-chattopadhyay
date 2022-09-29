@@ -10,8 +10,9 @@ const subjectError = document.querySelector("#subject-error");
 
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#message-error");
+const successMessage = document.querySelector("#success-message");
 
-function validateForm() {
+function validateForm(event) {
   event.preventDefault();
 
   if (checkLength(name.value, 6) === true) {
@@ -37,7 +38,22 @@ function validateForm() {
   } else {
     emailError.style.display = "block";
   }
+  // Check if all criterias are met //
+  if (
+    checkLength(name.value, 6) &&
+    checkLength(subject.value, 15) &&
+    checkLength(message.value, 25) &&
+    validateEmail(email.value) === true
+  ) {
+    successMessage.innerHTML =
+      '<div class="success-info">Your message has been submitted</div>';
+    contactForm.reset();
+  } else {
+    message.innerHTML = "";
+  }
 }
+
+// To Make sure whitespace doesn't count as letters //
 
 contactForm.addEventListener("submit", validateForm);
 
@@ -76,14 +92,13 @@ function createPageHTML(page) {
   console.log(page);
   const contactPageContainer = document.querySelector(".contact-page");
 
-  contactPageContainer.innerHTML = `<div>
-  <h2>${page.title.rendered}</h2>
-                                <div>
-                                <img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text}" class="bogger-picture"/>
-                                  
-                                  <div>${page.content.rendered}</div>
-                                </div>
-  
-  </div>
-                                  `;
+  contactPageContainer.innerHTML = `<div class="contact-hero-sec">
+                                        <div class="hero-contact-image"style="background-image:url(${page._embedded["wp:featuredmedia"][0].source_url});"></div> 
+                                        <div class="contact-text">
+                                            <p class="contact-para">${page.content.rendered}</p>
+                                        </div>  
+                                  </div> `;
 }
+
+//<img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text}" class="bogger-picture"/>
+//<h2>${page.title.rendered}</h2>

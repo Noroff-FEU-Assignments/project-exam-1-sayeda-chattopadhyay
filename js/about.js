@@ -19,9 +19,13 @@ function createPageHTML(page) {
   const aboutPageContainer = document.querySelector(".about-page");
 
   aboutPageContainer.innerHTML = `<div class="hero-sec">
-                                        <img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text}" class="bogger-picture"/>
-                                        <P>${page.content.rendered}</P>
-                                    </div>`;
+                                      <div class="pic-container">     
+                                          <img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text}" class="bogger-pic"/>
+                                      </div> 
+                                      <div class="about-text-container">
+                                          <P class="about-text">${page.content.rendered}</P>
+                                      </div> 
+                                  </div>`;
 }
 
 async function getFavouritePosts() {
@@ -40,19 +44,21 @@ async function getFavouritePosts() {
 
 getFavouritePosts();
 
-function createPostsHTML(posts) {
-  const aboutPostContainer = document.querySelector(".about-post_container");
+// My favourite recipes .I will make later
 
-  posts.forEach(function (post) {
-    aboutPostContainer.innerHTML += `
-    <a href="specific-blog.html?id=${post.id}" class="posts-card">
-                                            <img src="${post.jetpack_featured_media_url}" alt= "${post.title.rendered}" class="posts-image">
-                                            <div class="posts-text">
-                                              <h2>${post.slug}</h2>   
-                                            </div>   
-                                        </a>`;
-  });
-}
+// function createPostsHTML(posts) {
+//   const aboutPostContainer = document.querySelector(".about-post_container");
+
+//   posts.forEach(function (post) {
+//     aboutPostContainer.innerHTML += `
+//     <a href="specific-blog.html?id=${post.id}" class="posts-card">
+//                                             <img src="${post.jetpack_featured_media_url}" alt= "${post.title.rendered}" class="posts-image">
+//                                             <div class="posts-text">
+//                                               <h2>${post.slug}</h2>
+//                                             </div>
+//                                         </a>`;
+//   });
+// }
 
 // `<div class="hero-sec">
 //                                     <div class="hero-image">

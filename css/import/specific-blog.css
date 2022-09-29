@@ -1,8 +1,12 @@
 /* Breadcrump design */
 
+.specific-page-container {
+  margin-top: 174px;
+}
+
 .breadcrumb {
   padding: 0 0.5rem;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   margin-top: 100px;
   padding: 10px;
 }
@@ -13,7 +17,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 .breadcrumb ul li {

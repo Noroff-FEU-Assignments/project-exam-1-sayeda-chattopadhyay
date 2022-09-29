@@ -15,6 +15,13 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+
     <script
       src="https://kit.fontawesome.com/bdb94ef7c7.js"
       crossorigin="anonymous"
@@ -41,27 +48,33 @@
   <body>
     <header>
       <div class="logo-container">
-        <a href="index.html" class="logo"><span>My</span>Baking Desire</a>
+        <a href="index.html" class="logo">My Baking Desire</a>
       </div>
-      <label for="hamburger-menu" class="hamburger-menu_icon"
+      <!-- <label for="hamburger-menu" class="hamburger-menu_icon"
         ><i class="fas fa-bars ikon-spacing"></i
       ></label>
-      <input type="checkbox" id="hamburger-menu" />
+      <input type="checkbox" id="hamburger-menu" /> -->
       <nav class="stroke">
+        <div class="hamburger-open">
+          <i class="fa-solid fa-xmark close"></i>
+        </div>
         <ul class="nav1">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="hamburger-close">
+          <i class="fa-solid fa-bars menu"></i>
+        </div>
       </nav>
     </header>
-    <main class="index-main">
+    <main class="home-container">
       <div class="home-posts">
         <div class="loader"></div>
       </div>
       <div class="division"></div>
-      <h1 class="page-headings">Latest Posts</h1>
+      <h2 class="page-headings">Latest Posts</h2>
       <div class="underline-headings"></div>
       <div class="carousel-container">
         <div class="slider-container">
@@ -76,12 +89,13 @@
       </div>
       <div class="division"></div>
       <div class="popular-post_container">
-        <h2>Popular Indian Sweets</h2>
+        <h2 class="page-headings">Popular Indian Sweets</h2>
         <div class="popular-posts"></div>
       </div>
     </main>
 
     <footer class="footerContainer">Footer</footer>
+    <script src="js/hamburger.js"></script>
     <script src="js/components/displayError.js"></script>
     <script src="js/index.js"></script>
   </body>
