@@ -76,9 +76,9 @@
     display: none;
   }
 
-  /* .close {
+  .close {
     display: none;
-  } */
+  }
 
   /* ul {
     display: flex;
@@ -289,11 +289,11 @@
   }
 
   /* tring hamburger */
-  .hamburger-container {
+  /* .hamburger-container {
     display: none;
   }
 
   .nav-ul {
     flex-direction: row;
-  }
+  } */
 }
