@@ -46,10 +46,6 @@
   <body>
     <header>
       <a href="index.html" class="logo"><span>My</span>Baking Desire</a>
-      <label for="hamburger-menu" class="hamburger-menu_icon"
-        ><i class="fas fa-bars ikon-spacing"></i
-      ></label>
-      <input type="checkbox" id="hamburger-menu" />
       <nav class="stroke">
         <ul class="nav1">
           <li><a href="index.html">Home</a></li>
@@ -57,6 +53,9 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
+        <div class="menu">
+          <i class="fa-solid fa-bars menu-link"></i>
+        </div>
       </nav>
     </header>
     <main class="contact-container">
@@ -68,7 +67,7 @@
         </div>
       </section>
       <section class="form-container">
-        <form action="#" id="contact-form">
+        <form action="#" id="contact-form" method="Post">
           <div>
             <label for="name">Name (required)</label>
             <input type="text" id="name" name="name" />
@@ -104,7 +103,7 @@
               Should be more than 25 characters long
             </div>
           </div>
-          <button>Submit</button>
+          <button class="contact-button">Submit</button>
         </form>
         <div class="success-message" id="success-message"></div>
       </section>

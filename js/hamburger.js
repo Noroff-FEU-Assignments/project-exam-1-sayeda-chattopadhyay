@@ -1,14 +1,11 @@
 const menu = document.querySelector(".menu");
-console.log(menu);
-const close = document.querySelector(".close");
-console.log(close);
-const nav = document.querySelector("nav");
-console.log(nav);
+
+const nav = document.querySelector(".stroke");
 
 menu.addEventListener("click", () => {
-  nav.classList.add("open-nav");
-});
-
-close.addEventListener("click", () => {
-  nav.classList.remove("open-nav");
+  if (nav.classList.contains("open-nav")) {
+    nav.classList.remove("open-nav");
+  } else {
+    nav.classList.add("open-nav");
+  }
 });

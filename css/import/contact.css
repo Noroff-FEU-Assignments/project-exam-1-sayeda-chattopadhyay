@@ -132,6 +132,17 @@ textarea {
 .success-message {
   display: flex;
   justify-content: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   height: 50px;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto 20px;
 }
+
+/* .contact-button {
+  display: flex;
+  border-style: none;
+  text-decoration: none;
+  margin: 0 auto 2rem;
+  transition: ease-in 0.3s;
+} */

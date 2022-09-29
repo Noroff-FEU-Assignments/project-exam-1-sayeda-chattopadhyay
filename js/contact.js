@@ -46,7 +46,7 @@ function validateForm(event) {
     validateEmail(email.value) === true
   ) {
     successMessage.innerHTML =
-      '<div class="success-info">Your message has been submitted</div>';
+      '<div class="success-info">Your message has been submitted successfully.</div>';
     contactForm.reset();
   } else {
     message.innerHTML = "";
