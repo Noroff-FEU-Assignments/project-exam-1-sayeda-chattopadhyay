@@ -41,15 +41,24 @@
   </head>
   <body>
     <header>
-      <nav class="stroke">
-        <ul class="nav1">
+      <div class="logo-container">
+        <a href="index.html" class="logo">My Baking Desire</a>
+      </div>
+      <div class="menu">
+        <i class="fa-solid fa-bars menu-link"></i>
+      </div>
+      <nav class="stroke" id="main-nav">
+        <div class="close">
+          <i class="fa-solid fa-xmark close"></i>
+        </div>
+        <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="blog.html" class="active">Blog</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="menu">
-          <i class="fa-solid fa-bars menu-link"></i>
+        <div class="close">
+          <i class="fa-solid fa-xmark close"></i>
         </div>
       </nav>
     </header>
@@ -66,6 +75,7 @@
       </div>
     </main>
     <footer></footer>
+    <script src="js/hamburger.js"></script>
     <script src="js/components/displayError.js"></script>
     <script src="js/specific-blog.js"></script>
   </body>
