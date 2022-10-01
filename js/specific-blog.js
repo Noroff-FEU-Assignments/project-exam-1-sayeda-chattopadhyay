@@ -40,21 +40,21 @@ function createHTML(details) {
 
 /* To Create image modal*/
 
-// function addModalFunction() {
-//   const specificImage = document.querySelector(".specific-image");
-//   console.log(specificImage);
+function addModalFunction() {
+  const specificImage = document.querySelector(".specific-image");
+  console.log(specificImage);
 
-//   const modal = document.querySelector("#imageModal");
-//   const modalImg = document.querySelector("#imageModal img");
+  const modal = document.querySelector("#imageModal");
+  const modalImg = document.querySelector("#imageModal img");
 
-//   specificImage.onclick = function () {
-//     modal.style.display = "flex";
-//     modalImg.src = image.getAttribute("src");
-//   };
+  specificImage.onclick = function () {
+    modal.style.display = "flex";
+    modalImg.src = specificImage.getAttribute("src");
+  };
 
-//   modal.onclick = function () {
-//     this.style.display = "none";
-//   };
-// }
+  modal.onclick = function () {
+    this.style.display = "none";
+  };
+}
 
-// addModalFunction();
+addModalFunction();
