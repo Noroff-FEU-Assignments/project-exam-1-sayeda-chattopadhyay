@@ -6,7 +6,7 @@
 
 .contact-container {
   /* margin: 300px auto; */
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 100%;
   max-width: 80%;
   /* margin: 200px auto; */
@@ -21,7 +21,7 @@
   padding-bottom: 1em;
   width: 100%;
   max-width: 1200px;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 
 .contact-hero-sec > * {
@@ -63,14 +63,14 @@
   gap: 10px;
   padding: 20px;
   max-width: 1400px;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   flex-direction: row;
 }
 
 /* contact form */
 
 .form-container {
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   max-width: 1000px;
   margin: 0 auto;
 }

@@ -48,7 +48,7 @@ function createHTML(posts) {
                                           <p>${post.date}</p>
                                       </div>
                                       <div class="posts-button"> 
-                                        <a href="specific-blog.html?id=${post.id}" class="cta-card">Read The Post</a>
+                                        <a href="specific-blog.html?id=${post.id}" class="cta-card">Read more</a>
                                       </div>    
                                 </div>`;
   });
