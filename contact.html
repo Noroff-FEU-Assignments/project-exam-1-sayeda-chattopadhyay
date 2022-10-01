@@ -72,7 +72,7 @@
         </div>
       </section>
       <section class="form-container">
-        <form action="#" id="contact-form" method="Post">
+        <form action="#" id="contact-form" method="Post" class="contact-form">
           <div>
             <label for="name">Name (required)</label>
             <input type="text" id="name" name="name" />
@@ -108,11 +108,18 @@
               Should be more than 25 characters long
             </div>
           </div>
-          <button class="contact-button">Submit</button>
+          <div class="contact-button-container">
+            <button class="contact-button">Submit</button>
+          </div>
         </form>
         <div class="success-message" id="success-message"></div>
       </section>
     </main>
+    <footer>
+      <a href="#" class="footer-content">
+        All rights reserved 2022 &copy; My Baking Desire
+      </a>
+    </footer>
     <script src="js/hamburger.js"></script>
     <script src="js/components/displayError.js"></script>
     <script src="js/contact.js"></script>

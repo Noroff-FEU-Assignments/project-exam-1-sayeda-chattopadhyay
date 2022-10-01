@@ -70,12 +70,12 @@
 /* contact form */
 
 .form-container {
-  border: 2px solid red;
+  border: 2px solid yellow;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-#contact-form {
+.contact-form {
   max-width: 500px;
   padding: 2em;
   background: rgb(231, 226, 226);
@@ -83,6 +83,8 @@
   border-radius: 1rem;
   margin: 0 auto;
   margin-bottom: 30px;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 input {

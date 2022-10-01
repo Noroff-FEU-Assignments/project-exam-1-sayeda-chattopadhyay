@@ -82,8 +82,7 @@ async function getContactPageContent() {
     console.log({ url: page._embedded["wp:featuredmedia"][0].source_url });
     createPageHTML(page);
   } catch (error) {
-    console.log(error);
-    //   productContainer.innerHTML = errorMessage("an error found");
+    contactPageContainer.innerHTML = errorMessage("Something goes wrong");
   }
 }
 getContactPageContent();

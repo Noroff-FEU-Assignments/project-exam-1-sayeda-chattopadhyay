@@ -27,7 +27,9 @@ async function getPosts() {
       loadMoreButon.style.visibility = "hidden";
     }
   } catch (error) {
-    console.log(error);
+    console.log("An error found");
+    postsContainer.innerHTML = errorMessage("There are no post found");
+    // postsContainer.innerHTML = "There are no post found";
   }
 }
 

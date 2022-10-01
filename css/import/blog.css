@@ -1,3 +1,5 @@
+/* image modal start*/
+
 .image-modal {
   inset: 0;
   position: absolute;
@@ -10,6 +12,8 @@
 .image-modal img {
   max-width: 100%;
 }
+
+/* image modal end */
 
 .load-more-container {
   display: flex;
@@ -30,9 +34,15 @@
 }
 
 .show-more-results:hover {
-  background-color: brown;
-  color: white;
+  background-color: #875676;
+  color: #fff;
 }
+
+/* .cta-explore:hover {
+  border: 2px solid #623f56;
+  background-color: #fff;
+  color: #000;
+} */
 
 /* from style.css */
 

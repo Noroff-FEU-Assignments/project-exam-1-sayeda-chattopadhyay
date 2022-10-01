@@ -13,9 +13,7 @@ async function getHomeContent() {
     createPageHTML(page);
   } catch (error) {
     console.log("There is an error");
-    homePostContainer.innerHTML = errorMessage(
-      "error message: this is wrong url"
-    );
+    homePostContainer.innerHTML = errorMessage("Something goes wrong");
   }
 }
 getHomeContent();

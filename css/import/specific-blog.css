@@ -1,3 +1,20 @@
+/* image modal start*/
+
+.image-modal {
+  inset: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-modal img {
+  max-width: 100%;
+}
+
+/* image modal end */
+
 /* Breadcrump design */
 
 .specific-page-container {
@@ -30,19 +47,63 @@
 }
 
 .post-details {
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .details-card {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: #fefefe;
+  box-shadow: 0 3px 6px #0f22561f;
+  padding: 30px;
 }
 .details-card > * {
   flex: 1;
+}
+
+.details-card-image {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.blog-date {
+  margin-bottom: 20px;
+}
+
+.details-card-text {
+  /* display: flex;
+  flex-direction: column; */
+  margin: 0 auto;
+  max-width: 100%;
+  /* padding: 20px; */
+  /* border: 2px solid green; */
+}
+
+.details-card-text ul,
+.details-card-text ol {
+  padding: 20px;
+  /* border: 2px solid brown; */
+}
+
+.details-card-text h1 {
+  margin-top: 0;
+}
+
+.details-card-text h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.details-card-text p {
+  max-width: 90%;
+}
+
+.wp-block-image img {
+  height: auto;
 }

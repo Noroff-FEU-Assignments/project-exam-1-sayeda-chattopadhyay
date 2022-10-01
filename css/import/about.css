@@ -3,6 +3,8 @@
  
 } */
 
+/* Mobile view of about page */
+
 .hero-sec {
   display: flex;
   flex-direction: column;
@@ -19,11 +21,20 @@
 .about-text-container {
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
+  align-items: center;
+  border: 2px solid rgb(158, 153, 153);
+  padding: 20px;
 }
 
 .about-text h2 {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.about-text p {
+  max-width: 50%;
+}
+/* .about-text {
+  padding: 20px;
+} */

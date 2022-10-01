@@ -194,7 +194,7 @@
 
   .posts-card {
     max-width: 400px;
-    box-shadow: 0 20px 30px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 20px 30px 0 rgb(0 0 0 / 1%);
   }
   .post {
     flex-direction: row;
@@ -228,10 +228,12 @@
   }
 
   .hero-text {
+    width: 100%;
+    max-width: 45%;
     /* max-width: 400px; */
-    max-width: 60%;
     margin: 0 auto;
     text-align: center;
+    border: 2px solid;
   }
 
   .hero-text p {
@@ -249,6 +251,16 @@
 
   .breadcrumb ul {
     flex-direction: row;
+  }
+
+  /*Desktop view of specific page */
+
+  .details-card {
+    max-width: 1200px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+    margin: 0 auto;
   }
 
   /* About page desktop view */
