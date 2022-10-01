@@ -73,9 +73,11 @@ function validateEmail(email) {
 
 // hero section
 
+const url = "https://mybakingdesire.flopow.one/wp-json/wp/v2/pages/350?_embed";
+
+const contactPageContainer = document.querySelector(".contact-page");
+
 async function getContactPageContent() {
-  const url =
-    "https://mybakingdesire.flopow.one/wp-json/wp/v2/pages/350?_embed";
   try {
     const response = await fetch(url);
     const page = await response.json();
@@ -89,7 +91,6 @@ getContactPageContent();
 
 function createPageHTML(page) {
   console.log(page);
-  const contactPageContainer = document.querySelector(".contact-page");
 
   contactPageContainer.innerHTML = `<div class="contact-hero-sec">
                                         <div class="hero-contact-image"style="background-image:url(${page._embedded["wp:featuredmedia"][0].source_url});"></div> 

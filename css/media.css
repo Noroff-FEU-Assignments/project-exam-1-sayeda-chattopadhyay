@@ -6,6 +6,12 @@
   }
 } */
 
+@media only screen and (min-width: 479) {
+  .home-container {
+    margin: 160px auto;
+  }
+}
+
 @media only screen and (min-width: 600px) and (max-width: 857px) {
   .post {
     flex-flow: row wrap;
@@ -204,7 +210,7 @@
 
   /* creater margin top to the main */
   .home-container {
-    margin: 200px auto;
+    margin: 220px auto;
   }
 
   .home-posts {
@@ -233,7 +239,7 @@
     /* max-width: 400px; */
     margin: 0 auto;
     text-align: center;
-    border: 2px solid;
+    /* border: 2px solid; */
   }
 
   .hero-text p {

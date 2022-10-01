@@ -1,7 +1,7 @@
 /* Mobile view- hero section */
 
 .home-container {
-  margin: 100px auto;
+  margin: 210px auto;
 }
 
 .home-posts {
@@ -41,7 +41,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 .hero-para {
@@ -176,7 +176,7 @@
   gap: 10px;
   padding: 20px;
   max-width: 1400px;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   flex-direction: row;
 }
 

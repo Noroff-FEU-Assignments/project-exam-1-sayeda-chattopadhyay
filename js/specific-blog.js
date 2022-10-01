@@ -19,6 +19,7 @@ async function fetchPost() {
     detailsContainer.innerHTML = "";
 
     createHTML(details);
+    addModalFunction();
   } catch (error) {
     console.log(error);
     detailsContainer.innerHTML = errorMessage("Something goes wrong");
@@ -43,7 +44,6 @@ function createHTML(details) {
 function addModalFunction() {
   const specificImage = document.querySelector(".specific-image");
   console.log(specificImage);
-
   const modal = document.querySelector("#imageModal");
   const modalImg = document.querySelector("#imageModal img");
 
@@ -56,5 +56,3 @@ function addModalFunction() {
     this.style.display = "none";
   };
 }
-
-addModalFunction();

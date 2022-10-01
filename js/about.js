@@ -1,3 +1,4 @@
+const aboutPageContainer = document.querySelector(".about-page");
 const url = "https://mybakingdesire.flopow.one/wp-json/wp/v2/pages/48?_embed";
 
 async function getAboutPageContent() {
@@ -16,7 +17,6 @@ getAboutPageContent();
 
 function createPageHTML(page) {
   console.log(page);
-  const aboutPageContainer = document.querySelector(".about-page");
 
   aboutPageContainer.innerHTML = `<div class="hero-sec">
                                       <div class="pic-container">     
@@ -24,6 +24,9 @@ function createPageHTML(page) {
                                       </div> 
                                       <div class="about-text-container">
                                           <P class="about-text">${page.content.rendered}</P>
+                                          <div> 
+                                            <a href="contact.html" class="cta-explore">Contact me</a>
+                                        </div> 
                                       </div> 
                                   </div>`;
 }
