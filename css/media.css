@@ -86,8 +86,8 @@
   .posts-text h2 {
     margin-bottom: 20px;
     text-transform: capitalize;
-    font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
-    /* font-size: 1rem; */
+    /* font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif; */
+    font-size: 1.8 rem;
   }
 
   /* desktop view of slider and arrow style */
