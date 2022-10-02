@@ -33,7 +33,7 @@
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 15px;
   /* border: 2px solid green; */
 }
 
@@ -82,7 +82,8 @@
   margin: 0 auto;
   max-width: 100%;
   /* padding: 20px; */
-  /* border: 2px solid green; */
+  border: 2px solid rgb(228, 234, 228);
+  padding: 20px;
 }
 
 .details-card-text ul,
@@ -95,7 +96,8 @@
   margin-top: 0;
 }
 
-.details-card-text h2 {
+.details-card-text h2,
+h3 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -106,4 +108,6 @@
 
 .wp-block-image img {
   height: auto;
+  margin-bottom: 25px;
+  margin-bottom: 25px;
 }

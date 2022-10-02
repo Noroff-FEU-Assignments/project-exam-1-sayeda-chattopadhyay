@@ -18,10 +18,8 @@ html {
 
 body {
   font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
-  /* background-color: #f0f3f6; */
   background-color: var(--body-background-colour);
   margin: 1.5em;
-  /* border: 2px solid red; */
 }
 
 textarea {
@@ -38,7 +36,6 @@ h2,
 .logo {
   font-family: "great vibes", Verdana, Geneva, Tahoma, sans-serif;
   color: var(--primary-colour);
-  font-size: 3rem;
 }
 
 .logo-container {
@@ -48,6 +45,7 @@ h2,
 .logo {
   text-decoration: underline;
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 img {
@@ -58,7 +56,7 @@ img {
 /* mobile view of font size  of hero text*/
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 2.3 rem;
   margin-top: 1em;
   margin-bottom: 0.8em;
   line-height: 3.3 rem;
@@ -72,11 +70,11 @@ h3 {
   font-size: 1.8rem;
 }
 h4 {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 p {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: var(--Body-text-colour);
@@ -289,7 +287,7 @@ footer {
 
 .posts-card a {
   display: inline-block;
-  padding: 12px 10px;
+  padding: 10px 20px;
   text-transform: capitalize;
   text-align: center;
   margin: auto;
@@ -300,6 +298,11 @@ footer {
   /* padding: 8px; */
   background-color: var(--cta-background-colour);
   color: var(--cta-text);
+}
+
+.posts-card a:hover {
+  background-color: #875680;
+  color: #fff;
 }
 
 .posts-image {

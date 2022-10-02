@@ -53,13 +53,13 @@ function createPostsHTML(posts) {
     popularPostContainer.innerHTML += `<a href="specific-blog.html?id=${post.id}" class="posts-card">
                                           <img src="${post.jetpack_featured_media_url}" alt= "${post.title.rendered}" class="posts-image">
                                           <div class="posts-text">
-                                            <h2>${post.slug}</h2>   
+                                            <h3>${post.slug}</h3>   
                                           </div>   
                                       </a>`;
   });
 }
 
-// Fetching Latest Posts in the Slider
+// Fetching Latest Posts and placing in the Slider
 
 async function getLatestPosts() {
   const url =
@@ -105,13 +105,11 @@ const nextButton = document.getElementById("arrow-next");
 nextButton.addEventListener("click", (event) => {
   const latestPostCardWidth =
     document.querySelector(".latest-post-card").clientWidth * 4 + 30;
-  // const latestPostCardWidth = latestPostCard.clientWidth;
   slider.scrollLeft += latestPostCardWidth;
 });
 
 prevButton.addEventListener("click", () => {
   const latestPostCardWidth =
     document.querySelector(".latest-post-card").clientWidth * 4 + 30;
-  // const latestPostCardWidth = latestPostCard.clientWidth;
   slider.scrollLeft -= latestPostCardWidth;
 });

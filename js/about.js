@@ -6,7 +6,6 @@ async function getAboutPageContent() {
     const response = await fetch(url);
     const page = await response.json();
     console.log(page);
-    // console.log({ url: page._embedded["wp:featuredmedia"][0].source_url });
     createPageHTML(page);
   } catch (error) {
     console.log(error);

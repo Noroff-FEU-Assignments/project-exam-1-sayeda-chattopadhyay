@@ -71,7 +71,7 @@ function validateEmail(email) {
   return patternMatches;
 }
 
-// hero section
+// hero section in contact page
 
 const url = "https://mybakingdesire.flopow.one/wp-json/wp/v2/pages/350?_embed";
 
@@ -93,12 +93,9 @@ function createPageHTML(page) {
   console.log(page);
 
   contactPageContainer.innerHTML = `<div class="contact-hero-sec">
-                                        <div class="hero-contact-image"style="background-image:url(${page._embedded["wp:featuredmedia"][0].source_url});"></div> 
+                                        <div class="hero-contact-image"style="background-image:url(${page._embedded["wp:featuredmedia"][0].source_url});" alt="${page._embedded["wp:featuredmedia"][0].alt_text}"></div> 
                                         <div class="contact-text">
                                             <p class="contact-para">${page.content.rendered}</p>
                                         </div>  
                                   </div> `;
 }
-
-//<img src="${page._embedded["wp:featuredmedia"][0].source_url}" alt="${page._embedded["wp:featuredmedia"][0].alt_text}" class="bogger-picture"/>
-//<h2>${page.title.rendered}</h2>
