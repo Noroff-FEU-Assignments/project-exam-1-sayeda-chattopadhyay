@@ -92,7 +92,6 @@ header {
   width: 100%;
   z-index: 2;
   background-color: var(--header-background-colour);
-  /* border: 2px solid red; */
 }
 
 main {
@@ -108,11 +107,8 @@ nav {
   background-color: var(--header-background-colour);
   height: 100vh;
   z-index: 1000;
-  /* border: 2px solid blue; */
   transform: translateX(100%);
   transition: transform 0.5s ease-in-out;
-  /* new code */
-  /* display: none; */
 }
 
 .menu {
@@ -132,16 +128,6 @@ nav {
 .open-nav {
   transform: translateX(0%);
 }
-
-/* top: 0px; */
-/* width: 40%;
-  height: 100vh;
-  background: #fff;
-  text-transform: uppercase;
-  transform: translateX(100%);
-  transition: transform 0.5s ease-in-out; */
-/* new  code*/
-/* top: 0px; */
 
 /* checking */
 
@@ -182,10 +168,6 @@ nav ul li a:hover {
   color: var(--primary-colour);
 }
 
-/* .open-nav {
-  transform: translateX(100%);
-} */
-
 /* stroke */
 nav.stroke ul li a {
   position: relative;
@@ -214,7 +196,6 @@ footer {
   /* border: 2px solid red; */
   display: flex;
   justify-content: center;
-  /* margin-top: auto; */
   border-top: 3px solid var(--primary-colour);
   font-size: 1.5em;
   margin-top: 20px;
@@ -224,31 +205,6 @@ footer {
   padding: 15px;
   font-size: 1rem;
 }
-
-/* hamburger with css */
-/* #hamburger-menu {
-  display: none;
-}
-
-#hamburger-menu:checked ~ nav {
-  display: block;
-}
-
-.ikon-spacing {
-  font-size: 2.5em;
-} */
-
-/* hamburger with javascript */
-
-/* .close {
-  float: right;
-  margin: 2em;
-  width: 2.5em;
-}
-
- .open-nav {
-  transform: translateX(0%);
-}  
 
 /* hamburger with javascript */
 
@@ -291,11 +247,7 @@ footer {
   text-transform: capitalize;
   text-align: center;
   margin: auto;
-  /* new */
   border-radius: 4px;
-  /* font-size: 1.2rem; */
-  /* font-weight: 600; */
-  /* padding: 8px; */
   background-color: var(--cta-background-colour);
   color: var(--cta-text);
 }
@@ -328,23 +280,7 @@ footer {
 .footer-col ul li a:hover,
 .active {
   text-decoration: underline;
-  /* font-size: 1.3em; */
 }
-
-/* cta button for all pages */
-
-/* button {
-  background-color: var(--cta-background-colour);
-  color: var(--cta-text);
-  border: none;
-  font-size: 16px;
-  border-radius: 4px;
-  width: 300px;
-  padding: 20px;
-  color: white;
-  margin-top: 20px;
-  cursor: pointer;
-} */
 
 /* Submit button on contact form- mobile view */
 
@@ -354,8 +290,6 @@ button {
   border: none;
   font-size: 16px;
   border-radius: 4px;
-  /* width: 300px;
-  width: 200px; */
   padding: 20px;
   color: white;
   margin-top: 20px;
@@ -363,51 +297,3 @@ button {
   width: 100%;
   max-width: 300px;
 }
-/* trying again for hamburger */
-
-/* trying again */
-
-/* .content-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: auto;
-  max-width: 1200px;
-  padding: 0px 40px;
-}
-
-.logo_container {
-  display: flex;
-  align-items: center;
-  border: 2px solid red;
-}
-
-.hamburger-container {
-  display: block;
-}
-
-.nav-container {
-  position: absolute;
-  left: 50%;
-  top: 222px;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  z-index: 999;
-}
-
-nav {
-  display: block;
-}
-
-.nav-ul {
-  display: flex;
-  flex-direction: column;
-  margin: 0px;
-  padding: 0px;
-}
-
-.nav-ul a {
-  padding: 20px;
-} */
-
-/* trying again end*/
