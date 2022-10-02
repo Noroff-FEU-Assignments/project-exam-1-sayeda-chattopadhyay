@@ -38,21 +38,7 @@
     right: 0px;
   }
 
-  /* header label {
-    display: none;
-  } */
-
-  /* .menu {
-    display: none;
-  } */
-
   nav {
-    /* display: block;
-    position: static;
-    top: 0px; */
-    /* border: 2px solid blue; */
-
-    /* javas */
     transform: translateX(0);
     position: unset;
     display: block;
@@ -85,13 +71,6 @@
   .close {
     display: none;
   }
-
-  /* ul {
-    display: flex;
-    margin: 0px;
-  } */
-
-  /* javascript hamburger end*/
 
   /* Desktop view of carousel */
 
@@ -175,7 +154,7 @@
   }
 
   h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   h3 {
@@ -216,10 +195,6 @@
     height: 90vh;
   }
 
-  /* .hero-section > * {
-    flex: 1;
-  } */
-
   .hero-image {
     width: 100%;
     flex: 2;
@@ -229,10 +204,8 @@
   .hero-text {
     width: 100%;
     max-width: 45%;
-    /* max-width: 400px; */
     margin: 0 auto;
     text-align: center;
-    /* border: 2px solid; */
   }
 
   .hero-text p {
@@ -278,11 +251,6 @@
     flex: 1;
   }
 
-  /* .about-text {
-    display: flex;
-    flex-direction: column;
-  } */
-
   /* contact page- desktop view */
 
   /* contact page hero section */
@@ -294,17 +262,5 @@
 
   .hero-contact-image {
     width: 100%;
-    /* max-width: 600px; */
-    /* flex: 2; */
-    /* order: 2; */
   }
-
-  /* tring hamburger */
-  /* .hamburger-container {
-    display: none;
-  }
-
-  .nav-ul {
-    flex-direction: row;
-  } */
 }

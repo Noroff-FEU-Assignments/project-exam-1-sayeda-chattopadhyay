@@ -23,10 +23,7 @@
 }
 
 .show-more-results {
-  /* display: flex; */
-  /* position: absolute; */
   padding: 1rem 1.8rem;
-  /* display: inline-block; */
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -38,19 +35,11 @@
   color: #fff;
 }
 
-/* .cta-explore:hover {
-  border: 2px solid #623f56;
-  background-color: #fff;
-  color: #000;
-} */
-
 /* from style.css */
 
 .post-card_container {
   width: 100%;
-  /* border: 2px solid red; */
   max-width: 1000px;
-  /* margin: 250px auto 0; */
 }
 
 .card-small_container h1 {
@@ -66,9 +55,6 @@
   gap: 10px;
   padding: 20px;
   max-width: 1400px;
-  /* border: 2px solid blue; */
-  /* display: none; */
-  /* flex-direction: row; */
 }
 
 .posts-card {
@@ -89,8 +75,6 @@
   overflow: hidden;
   border-radius: 4px;
   cursor: pointer;
-  /* height: 250px; */
-  /* width: 350px; */
 }
 
 .image-post {

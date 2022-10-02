@@ -23,7 +23,6 @@
 
 .breadcrumb {
   padding: 0 0.5rem;
-  /* border: 2px solid red; */
   margin-top: 100px;
   padding: 10px;
 }
@@ -34,7 +33,6 @@
   list-style: none;
   margin: 0;
   padding: 15px;
-  /* border: 2px solid green; */
 }
 
 .breadcrumb ul li {
@@ -45,10 +43,6 @@
   content: "→";
   margin-right: 10px;
 }
-
-/* .post-details {
-  border: 2px solid red;
-}  */
 
 .details-card {
   width: 100%;
@@ -77,11 +71,8 @@
 }
 
 .details-card-text {
-  /* display: flex;
-  flex-direction: column; */
   margin: 0 auto;
   max-width: 100%;
-  /* padding: 20px; */
   border: 2px solid rgb(228, 234, 228);
   padding: 20px;
 }
@@ -89,7 +80,6 @@
 .details-card-text ul,
 .details-card-text ol {
   padding: 20px;
-  /* border: 2px solid brown; */
 }
 
 .details-card-text h1 {

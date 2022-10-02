@@ -21,20 +21,11 @@
 
 .hero-image {
   width: 100%;
-  /* max-width: 600px; */
   background: center no-repeat;
   background-size: cover;
   min-height: 60vh;
   margin: 0 auto;
 }
-
-/* .hero-section > * {
-  flex: 1;
-} */
-
-/* .hero-image {
-  flex: 2;
-} */
 
 .hero-text {
   display: flex;
@@ -64,11 +55,6 @@
   color: #000;
 }
 
-/* .profile-pic {
-  width: 300px;
-  height: 300px;
-} */
-
 /* Latest Post carousel */
 .page-headings {
   text-align: center;
@@ -84,7 +70,6 @@
 }
 
 .carousel-container {
-  /* border: 2px solid red; */
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -94,10 +79,7 @@
   margin: 1rem auto;
   position: relative;
   overflow: hidden;
-  /* border: 4px solid green; */
   width: 100%;
-  /* max-width: 1600px; */
-  /* z-index: -1; */
 }
 
 .slider {
@@ -110,7 +92,6 @@
   overflow: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  /* background-color: rgb(211, 209, 209); */
 }
 
 .latest-post-card {
@@ -120,34 +101,6 @@
 
   /* border: 2px solid blue; */
 }
-
-/* change again */
-
-/* 0ption-2 */
-
-/* .latest-posts {
-  margin: 1rem;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid green;
-} */
-
-/* .latest-post-card {
-  height: calc(100vh - 2rem);
-  width: 100%;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow: scroll;
-  scroll-behavior: smooth;
-} */
-
-/* .posts-card {
-  width: 100%;
-  height: 100%;
-  flex: 1 0 25%;
-} */
 
 /* desktop view of slider and arrow style */
 
@@ -193,13 +146,6 @@
   /* border: 1px solid #b0aaaa; */
 }
 
-/* create confusion. Will create bigger size on hover  */
-/* .posts-card:hover {
-  background-color: #dddddd;
-  cursor: pointer;
-  transition: all 1s ease;
-} */
-
 .home-posts-card a {
   display: block;
   text-align: center;
@@ -209,15 +155,6 @@
 .home-posts-card {
   width: 100%;
 }
-
-/* img {
-  width: 100%;
-} */
-
-/* .home-posts {
-  width: 200px;
-  height: 200px;
-} */
 
 /* loader style */
 
@@ -256,20 +193,3 @@
   background-size: cover;
   background-position: center top;
 }
-
-/* trying again for carousel*/
-
-/* .carousel-slider {
-  width: 100%;
-  max-width: 964px;
-  text-align: center;
-  margin-top: 25px;
-}
-
-.latest-posts {
-  display: grid;
-  grid-gap: 16px;
-  grid-auto-flow: column;
-  margin: auto;
-  box-sizing: border-box;
-} */
