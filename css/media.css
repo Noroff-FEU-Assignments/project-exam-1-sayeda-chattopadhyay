@@ -210,6 +210,8 @@
 
   .hero-text p {
     text-align: left;
+    max-width: 90%;
+    margin: 0 auto;
   }
   /* specific page desktop view */
 

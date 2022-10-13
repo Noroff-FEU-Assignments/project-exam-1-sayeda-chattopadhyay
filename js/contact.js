@@ -49,7 +49,7 @@ function validateForm(event) {
       '<div class="success-info">Your message has been submitted successfully.</div>';
     contactForm.reset();
   } else {
-    message.innerHTML = "";
+    successMessage.innerHTML = "";
   }
 }
 
