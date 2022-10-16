@@ -2,7 +2,7 @@
 
 ![image](Screenshot 2022-10-14 at 00.44.46.png)
 
-Year 1 exam project to develop a blog website, My Baking Desire
+- My Baking Desire is a baking blog that I created as part of my Year 1 exam project.
 
 ## Description
 
@@ -10,43 +10,43 @@ TMy baking desire was a exam assignment which was developed with HTML, CSS and J
 
 The following steps were used during development:
 
-Adobe XD was used for designing the website.
-The design was tested using Adobe XD prototype.
-The website was created using HTML , CSS and Javascript
-A WordPress installation was made.
-Hotjar was used for usability testing.
+- Adobe XD was used for designing the website.
+- The design was tested using Adobe XD prototype.
+- The website was created using HTML , CSS and Javascript
+- A WordPress installation was made.
+- Hotjar was used for usability testing.
 
 <a href="https://poetic-dusk-59ba87.netlify.app/">My baking Desire</a>
 
 ## Built With
 
-HTML
-CSS
-Javascript
+- HTML
+- CSS
+- Javascript
 
 ## CMS
 
-WordPress REST API
+- WordPress REST API
 
 ## Designed with
 
-AdobeXD
+- AdobeXD
 
 ## Getting Started
 
 ### Installing
 
-Download the zip of the project or clone the repo :
+- Download the zip of the project or clone the repo :
 
 https://github.com/Noroff-FEU-Assignments/project-exam-1-sayeda-chattopadhyay.git
 
 ### Running
 
-Open in Visual Studio Code and use the Live Server Preview extension to view the site.
+- Open in Visual Studio Code and use the Live Server Preview extension to view the site.
 
 ## Contributing
 
-Any suggestions and feedback are welcome
+- Any suggestions and feedback are welcome.
 
 ## Contact
 
