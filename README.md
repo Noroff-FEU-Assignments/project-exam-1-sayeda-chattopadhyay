@@ -1,6 +1,7 @@
-# My baking desire
+## My baking desire
 
-![image](Screenshot 2022-10-14 at 00.44.46.png)
+![image](images/Screenshot2022.png) 
+
 
 - My Baking Desire is a baking blog that I created as part of my Year 1 exam project.
 
