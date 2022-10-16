@@ -1,13 +1,13 @@
 ## My baking desire
 
-![image](images/Screenshot2022.png) 
+<img src= "images/Screenshot2022.png" width="600" height="400"/> </a>
 
 
 - My Baking Desire is a baking blog that I created as part of my Year 1 exam project.
 
 ## Description
 
-TMy baking desire was a exam assignment which was developed with HTML, CSS and JavaScript. The website was implemented WordPress.
+My baking desire was a exam assignment which was developed with HTML, CSS and JavaScript. The website was implemented WordPress.
 
 The following steps were used during development:
 
